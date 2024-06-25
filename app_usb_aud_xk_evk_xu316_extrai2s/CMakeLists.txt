@@ -23,6 +23,19 @@ set(APP_COMPILER_FLAGS_1AMi2o2xxxxxx ${SW_USB_AUDIO_FLAGS} -DAUDIO_CLASS=1)
 set(APP_COMPILER_FLAGS_2AMi2o2xxxxxx ${SW_USB_AUDIO_FLAGS})
 
 set(APP_INCLUDES src src/core src/extensions)
+
+
+# MEML-specific includes
+
+set(MEML_PROJECT meml_xmos_poctest)  # Modify this to point to the MEML project
+set(MEML_PROJECT_DIR ${CMAKE_CURRENT_LIST_DIR}/../../${MEML_PROJECT})
+set(MEML_PROJECT_DIR_RELATIVE ../../${MEML_PROJECT})
+message(VERBOSE "-- Adding ${MEML_PROJECT_DIR}...")
+add_subdirectory(${MEML_PROJECT_DIR} ./build/${MEML_PROJECT})
+
+# END MEML-specific includes
+
+
 set(XMOS_SANDBOX_DIR ${CMAKE_CURRENT_LIST_DIR}/../..)
 
 XMOS_REGISTER_APP()

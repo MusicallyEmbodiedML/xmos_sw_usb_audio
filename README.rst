@@ -1,3 +1,26 @@
+XMOS sw_usb_audio - MEML fork
+#############################
+
+Fork of XMOS's sw_usb_audio app building framework.
+
+Quick-start instructions on top XMOS's own:
+
+- Follow the installation of the XTC tools, then come here. (Tested with XTC Tools 15.2.1)
+- Create a top-level directory common to all XMOS projects, such as ``~/XMOS``.
+- ``cd ~/XMOS``
+- ``git clone https://github.com/xmos/xcommon_cmake.git``
+- ``git clone <INSERT FORK URL HERE>``
+- ``git clone`` whatever MEML repository you fancy, e.g. ``meml_xmos_poctest``
+- ``export XMOS_CMAKE_PATH=~/XMOS/xcommon_cmake`` (or Windows equivalent ``set``)
+- Within the ``sw_usb_audio`` repo, find the folder that is relevant to your target, e.g. ``app_usb_aud_xk_316_mc``. ``cd`` to that.
+- With a text editor, open ``CMakeLists.txt`` and set ``MEML_PROJECT`` to the right name, e.g. ``meml_xmos_poctest``
+- ``cmake -G "Unix Makefiles" -B build``
+- ``cd build``
+- ``xmake`` whatever config you want or the MEML project supports, e.g. ``2AMi8o8mxxxxx``
+- ``xrun --io ..\bin\`` -whatever binary file got created with config and target names- ``.xe``
+
+Below the original README from the forked release.
+
 XMOS USB Audio 2.0 Reference Design README
 ##########################################
 
