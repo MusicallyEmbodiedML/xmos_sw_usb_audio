@@ -9,8 +9,9 @@ Quick-start instructions on top XMOS's own:
 - Create a top-level directory common to all XMOS projects, such as ``~/XMOS``.
 - ``cd ~/XMOS``
 - ``git clone https://github.com/xmos/xcommon_cmake.git``
-- ``git clone <INSERT FORK URL HERE>``
-- ``git clone`` whatever MEML repository you fancy, e.g. ``meml_xmos_poctest``
+- ``git clone https://github.com/MusicallyEmbodiedML/xmos_sw_usb_audio.git sw_usb_audio``
+- ``git checkout memlbuild`` (unless we tidy up the branches and we work on master)
+- ``git clone`` the URL of whatever MEML repository you fancy, e.g. ``meml_xmos_poctest``
 - ``export XMOS_CMAKE_PATH=~/XMOS/xcommon_cmake`` (or Windows equivalent ``set``)
 - Within the ``sw_usb_audio`` repo, find the folder that is relevant to your target, e.g. ``app_usb_aud_xk_316_mc``. ``cd`` to that.
 - With a text editor, open ``CMakeLists.txt`` and set ``MEML_PROJECT`` to the right name, e.g. ``meml_xmos_poctest``
@@ -19,7 +20,7 @@ Quick-start instructions on top XMOS's own:
 - ``xmake`` whatever config you want or the MEML project supports, e.g. ``2AMi8o8mxxxxx``
 - ``xrun --io ..\bin\`` -whatever binary file got created with config and target names- ``.xe``
 
-Below the original README from the forked release.
+Below the original README from the forked release 8.1.0.
 
 XMOS USB Audio 2.0 Reference Design README
 ##########################################
